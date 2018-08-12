@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kdnssd
-Version  : 5.48.0
-Release  : 3
-URL      : https://download.kde.org/stable/frameworks/5.48/kdnssd-5.48.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.48/kdnssd-5.48.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.48/kdnssd-5.48.0.tar.xz.sig
+Version  : 5.49.0
+Release  : 4
+URL      : https://download.kde.org/stable/frameworks/5.49/kdnssd-5.49.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.49/kdnssd-5.49.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.49/kdnssd-5.49.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.1
@@ -18,6 +18,7 @@ Requires: kdnssd-license
 Requires: kdnssd-data
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
+BuildRequires : qtbase-dev qtbase-extras mesa-dev
 
 %description
 # KDE DNS-SD
@@ -66,14 +67,14 @@ license components for the kdnssd package.
 
 
 %prep
-%setup -q -n kdnssd-5.48.0
+%setup -q -n kdnssd-5.49.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532210372
+export SOURCE_DATE_EPOCH=1534094993
 mkdir clr-build
 pushd clr-build
 %cmake ..
@@ -81,11 +82,11 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1532210372
+export SOURCE_DATE_EPOCH=1534094993
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/kdnssd
-cp COPYING.LIB %{buildroot}/usr/share/doc/kdnssd/COPYING.LIB
 cp COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/doc/kdnssd/COPYING-CMAKE-SCRIPTS
+cp COPYING.LIB %{buildroot}/usr/share/doc/kdnssd/COPYING.LIB
 pushd clr-build
 %make_install
 popd
@@ -225,7 +226,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5DNSSD.so.5
-/usr/lib64/libKF5DNSSD.so.5.48.0
+/usr/lib64/libKF5DNSSD.so.5.49.0
 
 %files license
 %defattr(-,root,root,-)
