@@ -6,7 +6,7 @@
 #
 Name     : kdnssd
 Version  : 5.50.0
-Release  : 5
+Release  : 6
 URL      : https://download.kde.org/stable/frameworks/5.50/kdnssd-5.50.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.50/kdnssd-5.50.0.tar.xz
 Source99 : https://download.kde.org/stable/frameworks/5.50/kdnssd-5.50.0.tar.xz.sig
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536421235
+export SOURCE_DATE_EPOCH=1536432398
 mkdir clr-build
 pushd clr-build
 %cmake ..
@@ -82,7 +82,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1536421235
+export SOURCE_DATE_EPOCH=1536432398
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/kdnssd
 cp COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/doc/kdnssd/COPYING-CMAKE-SCRIPTS
