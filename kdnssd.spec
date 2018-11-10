@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kdnssd
-Version  : 5.51.0
-Release  : 8
-URL      : https://download.kde.org/stable/frameworks/5.51/kdnssd-5.51.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.51/kdnssd-5.51.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.51/kdnssd-5.51.0.tar.xz.sig
+Version  : 5.52.0
+Release  : 9
+URL      : https://download.kde.org/stable/frameworks/5.52/kdnssd-5.52.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.52/kdnssd-5.52.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.52/kdnssd-5.52.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.1
@@ -28,6 +28,14 @@ KDNSSD is a library for handling the DNS-based Service Discovery Protocol
 (DNS-SD), the layer of [Zeroconf](http://www.zeroconf.org) that allows network
 services, such as printers, to be discovered without any user intervention or
 centralized infrastructure.
+
+%package abi
+Summary: abi components for the kdnssd package.
+Group: Default
+
+%description abi
+abi components for the kdnssd package.
+
 
 %package data
 Summary: data components for the kdnssd package.
@@ -67,14 +75,14 @@ license components for the kdnssd package.
 
 
 %prep
-%setup -q -n kdnssd-5.51.0
+%setup -q -n kdnssd-5.52.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1539636470
+export SOURCE_DATE_EPOCH=1541867324
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -82,7 +90,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1539636470
+export SOURCE_DATE_EPOCH=1541867324
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdnssd
 cp COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/kdnssd/COPYING-CMAKE-SCRIPTS
@@ -94,12 +102,15 @@ popd
 %files
 %defattr(-,root,root,-)
 
+%files abi
+%defattr(-,root,root,-)
+/usr/share/abi/libKF5DNSSD.so.5.52.0.abi
+
 %files data
 %defattr(-,root,root,-)
 /usr/share/locale/af/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/ar/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/as/LC_MESSAGES/kdnssd5_qt.qm
-/usr/share/locale/ast/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/be/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/be@latin/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/bg/LC_MESSAGES/kdnssd5_qt.qm
@@ -226,7 +237,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5DNSSD.so.5
-/usr/lib64/libKF5DNSSD.so.5.51.0
+/usr/lib64/libKF5DNSSD.so.5.52.0
 
 %files license
 %defattr(0644,root,root,0755)
