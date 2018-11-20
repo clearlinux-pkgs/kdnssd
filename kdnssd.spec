@@ -6,7 +6,7 @@
 #
 Name     : kdnssd
 Version  : 5.52.0
-Release  : 9
+Release  : 10
 URL      : https://download.kde.org/stable/frameworks/5.52/kdnssd-5.52.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.52/kdnssd-5.52.0.tar.xz
 Source99 : https://download.kde.org/stable/frameworks/5.52/kdnssd-5.52.0.tar.xz.sig
@@ -28,14 +28,6 @@ KDNSSD is a library for handling the DNS-based Service Discovery Protocol
 (DNS-SD), the layer of [Zeroconf](http://www.zeroconf.org) that allows network
 services, such as printers, to be discovered without any user intervention or
 centralized infrastructure.
-
-%package abi
-Summary: abi components for the kdnssd package.
-Group: Default
-
-%description abi
-abi components for the kdnssd package.
-
 
 %package data
 Summary: data components for the kdnssd package.
@@ -82,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541867324
+export SOURCE_DATE_EPOCH=1542740607
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -90,7 +82,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1541867324
+export SOURCE_DATE_EPOCH=1542740607
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdnssd
 cp COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/kdnssd/COPYING-CMAKE-SCRIPTS
@@ -101,10 +93,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files abi
-%defattr(-,root,root,-)
-/usr/share/abi/libKF5DNSSD.so.5.52.0.abi
 
 %files data
 %defattr(-,root,root,-)
