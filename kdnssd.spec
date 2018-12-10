@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kdnssd
-Version  : 5.52.0
-Release  : 10
-URL      : https://download.kde.org/stable/frameworks/5.52/kdnssd-5.52.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.52/kdnssd-5.52.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.52/kdnssd-5.52.0.tar.xz.sig
+Version  : 5.53.0
+Release  : 11
+URL      : https://download.kde.org/stable/frameworks/5.53/kdnssd-5.53.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.53/kdnssd-5.53.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.53/kdnssd-5.53.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.1
@@ -67,22 +67,22 @@ license components for the kdnssd package.
 
 
 %prep
-%setup -q -n kdnssd-5.52.0
+%setup -q -n kdnssd-5.53.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542740607
+export SOURCE_DATE_EPOCH=1544477822
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
-make  %{?_smp_mflags} VERBOSE=1
+make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1542740607
+export SOURCE_DATE_EPOCH=1544477822
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdnssd
 cp COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/kdnssd/COPYING-CMAKE-SCRIPTS
@@ -215,6 +215,7 @@ popd
 /usr/include/KF5/KDNSSD/dnssd/servicebrowser.h
 /usr/include/KF5/KDNSSD/dnssd/servicemodel.h
 /usr/include/KF5/KDNSSD/dnssd/servicetypebrowser.h
+/usr/include/KF5/kdnssd_version.h
 /usr/lib64/cmake/KF5DNSSD/KF5DNSSDConfig.cmake
 /usr/lib64/cmake/KF5DNSSD/KF5DNSSDConfigVersion.cmake
 /usr/lib64/cmake/KF5DNSSD/KF5DNSSDTargets-relwithdebinfo.cmake
@@ -225,7 +226,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5DNSSD.so.5
-/usr/lib64/libKF5DNSSD.so.5.52.0
+/usr/lib64/libKF5DNSSD.so.5.53.0
 
 %files license
 %defattr(0644,root,root,0755)
