@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kdnssd
-Version  : 5.70.0
-Release  : 32
-URL      : https://download.kde.org/stable/frameworks/5.70/kdnssd-5.70.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.70/kdnssd-5.70.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.70/kdnssd-5.70.0.tar.xz.sig
+Version  : 5.71.0
+Release  : 33
+URL      : https://download.kde.org/stable/frameworks/5.71/kdnssd-5.71.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.71/kdnssd-5.71.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.71/kdnssd-5.71.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.1
@@ -69,15 +69,15 @@ license components for the kdnssd package.
 
 
 %prep
-%setup -q -n kdnssd-5.70.0
-cd %{_builddir}/kdnssd-5.70.0
+%setup -q -n kdnssd-5.71.0
+cd %{_builddir}/kdnssd-5.71.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589212541
+export SOURCE_DATE_EPOCH=1592245732
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -93,11 +93,11 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1589212541
+export SOURCE_DATE_EPOCH=1592245732
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdnssd
-cp %{_builddir}/kdnssd-5.70.0/COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/kdnssd/ff3ed70db4739b3c6747c7f624fe2bad70802987
-cp %{_builddir}/kdnssd-5.70.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/kdnssd/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/kdnssd-5.71.0/COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/kdnssd/ff3ed70db4739b3c6747c7f624fe2bad70802987
+cp %{_builddir}/kdnssd-5.71.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/kdnssd/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -111,6 +111,7 @@ popd
 /usr/share/locale/ar/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/as/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/ast/LC_MESSAGES/kdnssd5_qt.qm
+/usr/share/locale/az/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/be/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/be@latin/LC_MESSAGES/kdnssd5_qt.qm
 /usr/share/locale/bg/LC_MESSAGES/kdnssd5_qt.qm
@@ -238,7 +239,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5DNSSD.so.5
-/usr/lib64/libKF5DNSSD.so.5.70.0
+/usr/lib64/libKF5DNSSD.so.5.71.0
 
 %files license
 %defattr(0644,root,root,0755)
