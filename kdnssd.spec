@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kdnssd
-Version  : 5.83.0
-Release  : 45
-URL      : https://download.kde.org/stable/frameworks/5.83/kdnssd-5.83.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.83/kdnssd-5.83.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.83/kdnssd-5.83.0.tar.xz.sig
+Version  : 5.85.0
+Release  : 46
+URL      : https://download.kde.org/stable/frameworks/5.85/kdnssd-5.85.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.85/kdnssd-5.85.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.85/kdnssd-5.85.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.0
@@ -69,35 +69,35 @@ license components for the kdnssd package.
 
 
 %prep
-%setup -q -n kdnssd-5.83.0
-cd %{_builddir}/kdnssd-5.83.0
+%setup -q -n kdnssd-5.85.0
+cd %{_builddir}/kdnssd-5.85.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1623651896
+export SOURCE_DATE_EPOCH=1630894526
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1623651896
+export SOURCE_DATE_EPOCH=1630894526
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdnssd
-cp %{_builddir}/kdnssd-5.83.0/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/kdnssd/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
-cp %{_builddir}/kdnssd-5.83.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kdnssd/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/kdnssd-5.85.0/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/kdnssd/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
+cp %{_builddir}/kdnssd-5.85.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kdnssd/20079e8f79713dce80ab09774505773c926afa2a
 pushd clr-build
 %make_install
 popd
@@ -219,15 +219,31 @@ popd
 /usr/include/KF5/KDNSSD/DNSSD/ServiceBrowser
 /usr/include/KF5/KDNSSD/DNSSD/ServiceModel
 /usr/include/KF5/KDNSSD/DNSSD/ServiceTypeBrowser
+/usr/include/KF5/KDNSSD/KDNSSD/DomainBrowser
+/usr/include/KF5/KDNSSD/KDNSSD/DomainModel
+/usr/include/KF5/KDNSSD/KDNSSD/PublicService
+/usr/include/KF5/KDNSSD/KDNSSD/RemoteService
+/usr/include/KF5/KDNSSD/KDNSSD/ServiceBase
+/usr/include/KF5/KDNSSD/KDNSSD/ServiceBrowser
+/usr/include/KF5/KDNSSD/KDNSSD/ServiceModel
+/usr/include/KF5/KDNSSD/KDNSSD/ServiceTypeBrowser
 /usr/include/KF5/KDNSSD/dnssd/domainbrowser.h
 /usr/include/KF5/KDNSSD/dnssd/domainmodel.h
-/usr/include/KF5/KDNSSD/dnssd/kdnssd_export.h
 /usr/include/KF5/KDNSSD/dnssd/publicservice.h
 /usr/include/KF5/KDNSSD/dnssd/remoteservice.h
 /usr/include/KF5/KDNSSD/dnssd/servicebase.h
 /usr/include/KF5/KDNSSD/dnssd/servicebrowser.h
 /usr/include/KF5/KDNSSD/dnssd/servicemodel.h
 /usr/include/KF5/KDNSSD/dnssd/servicetypebrowser.h
+/usr/include/KF5/KDNSSD/kdnssd/domainbrowser.h
+/usr/include/KF5/KDNSSD/kdnssd/domainmodel.h
+/usr/include/KF5/KDNSSD/kdnssd/kdnssd_export.h
+/usr/include/KF5/KDNSSD/kdnssd/publicservice.h
+/usr/include/KF5/KDNSSD/kdnssd/remoteservice.h
+/usr/include/KF5/KDNSSD/kdnssd/servicebase.h
+/usr/include/KF5/KDNSSD/kdnssd/servicebrowser.h
+/usr/include/KF5/KDNSSD/kdnssd/servicemodel.h
+/usr/include/KF5/KDNSSD/kdnssd/servicetypebrowser.h
 /usr/include/KF5/kdnssd_version.h
 /usr/lib64/cmake/KF5DNSSD/KF5DNSSDConfig.cmake
 /usr/lib64/cmake/KF5DNSSD/KF5DNSSDConfigVersion.cmake
@@ -239,7 +255,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5DNSSD.so.5
-/usr/lib64/libKF5DNSSD.so.5.83.0
+/usr/lib64/libKF5DNSSD.so.5.85.0
 
 %files license
 %defattr(0644,root,root,0755)
