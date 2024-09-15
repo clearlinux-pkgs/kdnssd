@@ -1,127 +1,24 @@
-libKF6DNSSD.so.6:KDNSSD::DomainModel::qt_metacall(QMetaObject::Call, int, void**)
-libKF6DNSSD.so.6:KDNSSD::DomainModel::qt_metacast(char const*)
-libKF6DNSSD.so.6:KDNSSD::DomainModel::DomainModel(KDNSSD::DomainBrowser*, QObject*)
-libKF6DNSSD.so.6:KDNSSD::DomainModel::DomainModel(KDNSSD::DomainBrowser*, QObject*)
-libKF6DNSSD.so.6:KDNSSD::DomainModel::~DomainModel()
-libKF6DNSSD.so.6:KDNSSD::DomainModel::~DomainModel()
-libKF6DNSSD.so.6:KDNSSD::DomainModel::~DomainModel()
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::virtual_hook(int, void*)
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::ServiceBase(QString const&, QString const&, QString const&, QString const&, unsigned short)
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::ServiceBase(QString const&, QString const&, QString const&, QString const&, unsigned short)
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::~ServiceBase()
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::~ServiceBase()
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::~ServiceBase()
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::qt_metacall(QMetaObject::Call, int, void**)
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::qt_metacast(char const*)
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::ServiceModel(KDNSSD::ServiceBrowser*, QObject*)
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::ServiceModel(KDNSSD::ServiceBrowser*, QObject*)
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::~ServiceModel()
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::~ServiceModel()
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::~ServiceModel()
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::domainAdded(QString const&)
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::qt_metacall(QMetaObject::Call, int, void**)
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::qt_metacast(char const*)
 libKF6DNSSD.so.6:KDNSSD::DomainBrowser::startBrowse()
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::domainRemoved(QString const&)
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::DomainBrowser(KDNSSD::DomainBrowser::DomainType, QObject*)
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::DomainBrowser(KDNSSD::DomainBrowser::DomainType, QObject*)
 libKF6DNSSD.so.6:KDNSSD::DomainBrowser::~DomainBrowser()
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::~DomainBrowser()
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::~DomainBrowser()
-libKF6DNSSD.so.6:KDNSSD::PublicService::qt_metacall(QMetaObject::Call, int, void**)
-libKF6DNSSD.so.6:KDNSSD::PublicService::qt_metacast(char const*)
-libKF6DNSSD.so.6:KDNSSD::PublicService::setSubTypes(QList<QString> const&)
-libKF6DNSSD.so.6:KDNSSD::PublicService::setTextData(QMap<QString, QByteArray> const&)
-libKF6DNSSD.so.6:KDNSSD::PublicService::publishAsync()
-libKF6DNSSD.so.6:KDNSSD::PublicService::virtual_hook(int, void*)
-libKF6DNSSD.so.6:KDNSSD::PublicService::setServiceName(QString const&)
-libKF6DNSSD.so.6:KDNSSD::PublicService::stop()
+libKF6DNSSD.so.6:KDNSSD::DomainModel::~DomainModel()
 libKF6DNSSD.so.6:KDNSSD::PublicService::publish()
-libKF6DNSSD.so.6:KDNSSD::PublicService::setPort(unsigned short)
-libKF6DNSSD.so.6:KDNSSD::PublicService::setType(QString const&)
+libKF6DNSSD.so.6:KDNSSD::PublicService::publishAsync()
 libKF6DNSSD.so.6:KDNSSD::PublicService::published(bool)
-libKF6DNSSD.so.6:KDNSSD::PublicService::setDomain(QString const&)
-libKF6DNSSD.so.6:KDNSSD::PublicService::PublicService(QString const&, QString const&, unsigned int, QString const&, QList<QString> const&)
-libKF6DNSSD.so.6:KDNSSD::PublicService::PublicService(QString const&, QString const&, unsigned int, QString const&, QList<QString> const&)
+libKF6DNSSD.so.6:KDNSSD::PublicService::stop()
 libKF6DNSSD.so.6:KDNSSD::PublicService::~PublicService()
-libKF6DNSSD.so.6:KDNSSD::PublicService::~PublicService()
-libKF6DNSSD.so.6:KDNSSD::PublicService::~PublicService()
-libKF6DNSSD.so.6:KDNSSD::RemoteService::qt_metacall(QMetaObject::Call, int, void**)
-libKF6DNSSD.so.6:KDNSSD::RemoteService::qt_metacast(char const*)
-libKF6DNSSD.so.6:KDNSSD::RemoteService::resolveAsync()
-libKF6DNSSD.so.6:KDNSSD::RemoteService::virtual_hook(int, void*)
 libKF6DNSSD.so.6:KDNSSD::RemoteService::resolve()
+libKF6DNSSD.so.6:KDNSSD::RemoteService::resolveAsync()
 libKF6DNSSD.so.6:KDNSSD::RemoteService::resolved(bool)
-libKF6DNSSD.so.6:KDNSSD::RemoteService::RemoteService(QString const&, QString const&, QString const&)
-libKF6DNSSD.so.6:KDNSSD::RemoteService::RemoteService(QString const&, QString const&, QString const&)
 libKF6DNSSD.so.6:KDNSSD::RemoteService::~RemoteService()
-libKF6DNSSD.so.6:KDNSSD::RemoteService::~RemoteService()
-libKF6DNSSD.so.6:KDNSSD::RemoteService::~RemoteService()
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::isAvailable()
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::qt_metacall(QMetaObject::Call, int, void**)
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::qt_metacast(char const*)
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::startBrowse()
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::serviceAdded(QExplicitlySharedDataPointer<KDNSSD::RemoteService>)
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::virtual_hook(int, void*)
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::serviceRemoved(QExplicitlySharedDataPointer<KDNSSD::RemoteService>)
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::resolveHostName(QString const&)
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::getLocalHostName()
+libKF6DNSSD.so.6:KDNSSD::ServiceBase::~ServiceBase()
 libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::finished()
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::ServiceBrowser(QString const&, bool, QString const&, QString const&)
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::ServiceBrowser(QString const&, bool, QString const&, QString const&)
+libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::getLocalHostName()
+libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::isAvailable()
+libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::serviceAdded(QExplicitlySharedDataPointer<KDNSSD::RemoteService>)
+libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::serviceRemoved(QExplicitlySharedDataPointer<KDNSSD::RemoteService>)
+libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::startBrowse()
 libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::~ServiceBrowser()
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::~ServiceBrowser()
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::~ServiceBrowser()
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::qt_metacall(QMetaObject::Call, int, void**)
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::qt_metacast(char const*)
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::startBrowse()
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::serviceTypeAdded(QString const&)
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::serviceTypeRemoved(QString const&)
+libKF6DNSSD.so.6:KDNSSD::ServiceModel::~ServiceModel()
 libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::finished()
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::ServiceTypeBrowser(QString const&, QObject*)
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::ServiceTypeBrowser(QString const&, QObject*)
+libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::startBrowse()
 libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::~ServiceTypeBrowser()
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::~ServiceTypeBrowser()
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::~ServiceTypeBrowser()
-libKF6DNSSD.so.6:KDNSSD::DomainModel::metaObject() const
-libKF6DNSSD.so.6:KDNSSD::DomainModel::columnCount(QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::DomainModel::data(QModelIndex const&, int) const
-libKF6DNSSD.so.6:KDNSSD::DomainModel::index(int, int, QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::DomainModel::parent(QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::DomainModel::hasIndex(int, int, QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::DomainModel::rowCount(QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::serviceName() const
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::port() const
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::type() const
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::domain() const
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::hostName() const
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::textData() const
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::operator==(KDNSSD::ServiceBase const&) const
-libKF6DNSSD.so.6:KDNSSD::ServiceBase::operator!=(KDNSSD::ServiceBase const&) const
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::headerData(int, Qt::Orientation, int) const
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::metaObject() const
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::columnCount(QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::data(QModelIndex const&, int) const
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::index(int, int, QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::parent(QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::hasIndex(int, int, QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::ServiceModel::rowCount(QModelIndex const&) const
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::metaObject() const
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::domains() const
-libKF6DNSSD.so.6:KDNSSD::DomainBrowser::isRunning() const
-libKF6DNSSD.so.6:KDNSSD::PublicService::metaObject() const
-libKF6DNSSD.so.6:KDNSSD::PublicService::isPublished() const
-libKF6DNSSD.so.6:KDNSSD::PublicService::subtypes() const
-libKF6DNSSD.so.6:KDNSSD::RemoteService::isResolved() const
-libKF6DNSSD.so.6:KDNSSD::RemoteService::metaObject() const
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::metaObject() const
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::isAutoResolving() const
-libKF6DNSSD.so.6:KDNSSD::ServiceBrowser::services() const
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::metaObject() const
-libKF6DNSSD.so.6:KDNSSD::ServiceTypeBrowser::serviceTypes() const
-libKF6DNSSD.so.6:non-virtual thunk to KDNSSD::PublicService::virtual_hook(int, void*)
-libKF6DNSSD.so.6:non-virtual thunk to KDNSSD::PublicService::~PublicService()
-libKF6DNSSD.so.6:non-virtual thunk to KDNSSD::PublicService::~PublicService()
-libKF6DNSSD.so.6:non-virtual thunk to KDNSSD::RemoteService::virtual_hook(int, void*)
-libKF6DNSSD.so.6:non-virtual thunk to KDNSSD::RemoteService::~RemoteService()
-libKF6DNSSD.so.6:non-virtual thunk to KDNSSD::RemoteService::~RemoteService()
